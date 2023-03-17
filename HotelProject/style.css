@@ -17,7 +17,7 @@ header{
 }
 
 
-header li{
+.nav li{
     list-style: none;
     margin-bottom: 16px;
   
@@ -39,17 +39,21 @@ header a:hover{
     height: 49px;
     
 }
-.lis{
-    display: flex;
-    gap:15px;
+.nav{
+  
+        display: flex;
+      
+        justify-content: center;
+        align-items: center;
+        gap:15px;
+        
     
 }
-.lis li{
+
+/* .lis li{
     display: inline-block;
-}
-.menu{
-    display: none;
-}
+} */
+
 .lis{
     margin-right:30px;
 }
@@ -63,15 +67,21 @@ header a:hover{
     margin-left: 15px;
 }
 
-.images{
-    background-image:url('uuu.jpg');
-   height:78vh;
-   position: relative;
+
+
+.uuu{
+    width: 100%;
+    filter: brightness(30%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height:82vh;
 }
 
 .ptext{
     position:absolute; 
-    color: rgb(0, 0, 0);
+    color: white;    
     font-family: sans-serif;
     top: 20%;
     left:25%;
@@ -110,7 +120,7 @@ header a:hover{
     font-family:sans-serif;
     font-size: 13px;
     text-decoration: none;
-    color:black;
+    color:white;
     text-transform: uppercase;
     font-weight: 600;
     padding:10px;
@@ -130,22 +140,28 @@ header a:hover{
     display: flex;
     gap: 37px;
 }
-
+.inputem{
+    position: absolute;
+    top: 63%;
+    left: 19%;
+    height: 22vh;
+    width:60vw;
+    background-color: white;
+    border-radius: 5px;
+}
+ 
 .menuoutput{
     display: flex;
-    gap: 30px;
-    height: 17vh;
-    background-color: white;
-    width:60vw;
-    position: absolute;
-    top: 70%;
-    left: 15%;
-    border-radius: 5px;
-    padding-bottom:20px;
-    padding-left: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; 
+   
+   
 
-
-
+} 
+.search{
+   margin-top: 25px;
+   display: none;
 }
 .location{
     margin-left:15px;
@@ -160,7 +176,7 @@ header a:hover{
     box-shadow: 5px 0 5px rgb(245, 237, 237);
    padding:10px;
    border-radius: 5px;
-   width: 15vw;
+  
    font-size: 15.5px;
  
  
@@ -175,23 +191,28 @@ header a:hover{
     margin-bottom:3px;
 }
 
-.search{
-    position: absolute;
-    left: 48%;
+.searchbox{
+  
+  
    
   border: 1px solid blue;
   /* border: none; */
   padding:5px 55px;
-    margin-top: 5px;
+  display:inline-block; 
+  position: absolute;
+  left: 34%;
+  top: 77%;
+   
     cursor:pointer;
-    background-color: blueviolet;
+    background-color: rgb(206, 143, 49);;
     color: white;
     font-family: sans-serif;
     text-transform: uppercase;
     font-size: 12px;
     border: none;
     border-radius: 3px;
-    text-align: center;
+ 
+
    
 }
 .p4{
@@ -499,7 +520,7 @@ h6{
 .follows{
     margin-top: -10px;
 }
-.lis i:nth-child(1){
+.nav i:nth-child(1){
     margin-right: -10px;
     font-size: 12px;
 }
@@ -507,8 +528,20 @@ h6{
     position: absolute;
     top: 3%;
     right: 1%;
-   
+   display: none;
+    
 }
+.st img{
+    width: 250px;
+    
+}
+
+.st h4{
+    margin-top:5px;
+    margin-bottom: 0;
+}
+
+  
 
 
 
@@ -518,38 +551,44 @@ h6{
         font-size: 2.5rem;
     }
 
-  .menuoutput input{
-    width: 12vw;
+   .menuoutput input{
+   width: 10vh;
     gap:0;
     margin-right:0;
-  }
-  .menuoutput{
-    left: 23%;
-    width: 55vw;
-  }
-  .nav{
+  } 
+   .menuoutput{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+  } 
+   .nav{
     display: none;
   
    
-  }
+  } 
   .menu{
     margin-bottom: 60px;
+    display: block;
   }
    
     
 }
 @media ( max-width:1200px){
 
-    .section1{
-        position: relative;
+    .menuoutput input{
+        width: 16vh;
     }
-    .services{
+
+    
+    /* .lis{
         flex-direction: column;
         gap:40px;
         margin-left: 40px;
-    }
+    } */
+   .
     .menu{
-        display: block;
+        display: inline-block;
         z-index: 999;
     }
     .img5{
@@ -558,12 +597,10 @@ h6{
         justify-content: center;
     }
     .mailsub{
-    
         top: 29%;
-        left: 42%;
-       
-       
+        left: 42%;   
     }
+    
     .fa-house{
         display: none;
     }
@@ -571,6 +608,19 @@ h6{
         flex-direction: column;
     }
     .nav{
+        /* width: 100%;
+        height: 92vh;
+        background-color: white;
+     
+      
+        display: flex;
+        justify-content: center;
+        align-items: center; */
+
+        flex-flow: column;
+      
+    }
+    /* .lis{
         width: 100%;
         height: 92vh;
         background-color: white;
@@ -579,8 +629,7 @@ h6{
         display: flex;
         justify-content: center;
         align-items: center;
-      
-    }
+    } */
     .lis{
         flex-direction: column;
         align-items: center;
@@ -629,6 +678,9 @@ h6{
            
            
         }
+        .menuoutput input{
+            width: 7vh;
+        }
        
     }
 
@@ -652,6 +704,9 @@ h6{
            
         }
     }
+    @media (min-width:730px) and (max-width:800px){
+       
+    }
 
 @media (max-width:700px){
     .ptext{
@@ -665,19 +720,49 @@ h6{
        
        
     }
+    .uuu{
+        height:104vh;
+    }
     
     
 .menuoutput{
     flex-direction: column;
-    left: 10%;
-    height:60vh;
+   
+  
     gap:0;
-    width:60vw;
+ 
+ 
+   
+}
+
+.searchbox{
+  
+  
+   
+    border: 1px solid blue;
+    /* border: none; */
+    padding:5px 55px;
+    display:inline-block; 
+    position: absolute;
+    left: 29%;
+    top: 87%;
+     
+      cursor:pointer;
+      background-color: rgb(206, 143, 49);;
+      color: white;
+      font-family: sans-serif;
+      text-transform: uppercase;
+      font-size: 12px;
+      border: none;
+      border-radius: 3px;
+   
+  
+     
+  }
+.inputem{
     height: 46vh;
 }
-.search{
-    left:18%;
-}
+
 .menuoutput input{
    
     margin-right: 0;
